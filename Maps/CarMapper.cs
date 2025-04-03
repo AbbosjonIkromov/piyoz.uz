@@ -10,6 +10,6 @@ namespace piyoz.uz.Maps
         public partial IEnumerable<CarDto> CarsToCarDtos(IEnumerable<Car> cars);
         public partial CarDto CarToCarDto(Car car);
         public partial Car CreateCarDtoToCar(CreateCarDto createCarDto);
-        public partial Car UpdateCarDtoToCar(UpdateCarDto updateCarDto);
+        public partial void UpdateCarDtoToCar(UpdateCarDto updateCarDto, Car car);
     }
 }

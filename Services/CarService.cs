@@ -57,7 +57,7 @@ namespace piyoz.uz.Services
                 throw new KeyNotFoundException("Car not found");
             }
             var carMapper = new CarMapper();
-            car = carMapper.UpdateCarDtoToCar(updateCarDto);
+            carMapper.UpdateCarDtoToCar(updateCarDto, car);
             _repository.Update(car);
             await _repository.SaveChangesAsync();
         }

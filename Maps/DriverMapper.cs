@@ -10,6 +10,6 @@ namespace piyoz.uz.Maps
         public partial IEnumerable<DriverDto> DriversToDriverDtos(IEnumerable<Driver> drivers);
         public partial DriverDto DriverToDriverDto(Driver driver);
         public partial Driver CreateDriverDtoToDriver(CreateDriverDto createDriverDto);
-        public partial Driver UpdateDriverDtoToDriver(UpdateDriverDto updateDriverDto);
+        public partial void UpdateDriverDtoToDriver(UpdateDriverDto updateDriverDto, Driver driver);
     }
 }

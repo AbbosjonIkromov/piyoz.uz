@@ -28,6 +28,8 @@ namespace piyoz.uz
             builder.Services.AddScoped<ICarService, CarService>();
             builder.Services.AddScoped<IDriverRepository, DriverRepository>();
             builder.Services.AddScoped<IDriverService, DriverService>();
+            builder.Services.AddScoped<IRentalRepository, RentalRepository>();
+            builder.Services.AddScoped<IRentalService, RentalService>();
 
             builder.Services.AddDbContext<DataContext>(options =>
             {
@@ -50,7 +52,8 @@ namespace piyoz.uz
             app.UseAuthorization();
 
             app.MapCarEndpoints()
-                .MapDriverEndPoints();
+                .MapDriverEndPoints()
+                .MapRentalEndPoint();
 
             app.Run();
         }

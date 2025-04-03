@@ -53,7 +53,7 @@ namespace piyoz.uz.Services
                 throw new KeyNotFoundException("Driver not found");
             }
             var driverMapper = new DriverMapper();
-            driver = driverMapper.UpdateDriverDtoToDriver(updateDriverDto);
+            driverMapper.UpdateDriverDtoToDriver(updateDriverDto, driver);
             _repository.Update(driver);
             await _repository.SaveChangesAsync();
 
